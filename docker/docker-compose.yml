@@ -5,7 +5,7 @@ services:
     container_name: iki_diff_base
     environment:
       DISPLAY: $DISPLAY
-      ROS_DOMAIN_ID: 69
+      ROS_DOMAIN_ID: $ROS_DOMAIN_ID
       NVIDIA_VISIBLE_DEVICES: all
       NVIDIA_DRIVER_CAPABILITIES: compute,video,utility,graphics
       QT_X11_NO_MITSHM: '1'
