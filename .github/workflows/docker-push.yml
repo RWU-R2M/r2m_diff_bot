@@ -1,0 +1,55 @@
+name: Build and Push Multi-Architecture Docker Image
+
+on:
+  push:
+    branches:
+      - '**'
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-multiarch:
+    runs-on: ubuntu-latest
+    name: Build Multi-Architecture Image
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - name: Extract repository name and branch
+      id: repo-info
+      run: |
+        REPO_NAME=$(echo "${{ github.repository }}" | awk -F '/' '{print $2}' | tr '[:upper:]' '[:lower:]')
+        REPO_OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+        BRANCH_NAME=$(echo "${{ github.ref_name }}" | tr '/' '-' | tr '[:upper:]' '[:lower:]')
+        echo "REPO_NAME=$REPO_NAME" >> $GITHUB_ENV
+        echo "REPO_OWNER=$REPO_OWNER" >> $GITHUB_ENV
+        echo "BRANCH_NAME=$BRANCH_NAME" >> $GITHUB_ENV
+
+    - name: Set up QEMU
+      uses: docker/setup-qemu-action@v2
+      
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Log in to GitHub Container Registry
+      uses: docker/login-action@v2
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Build and push multi-architecture Docker image
+      uses: docker/build-push-action@v3
+      with:
+        context: .
+        file: ./docker/Dockerfile
+        platforms: linux/amd64,linux/arm64
+        push: true
+        tags: |
+          ghcr.io/${{ env.REPO_OWNER }}/${{ env.REPO_NAME }}:${{ env.BRANCH_NAME }}
+          ${{ github.ref == 'refs/heads/main' && format('ghcr.io/{0}/{1}:latest', env.REPO_OWNER, env.REPO_NAME) || '' }}
