@@ -1,7 +1,7 @@
 version: "3.11"
 services:
   humble_amd64:
-    image: ghcr.io/rwu-r2m/ros_raspi:amd64
+    image: ghcr.io/rwu-r2m/r2m_diff_bot:latest-amd64
     platform: linux/amd64
     environment:
         ROS_DOMAIN_ID: 1
