@@ -1,6 +1,9 @@
 # Diff base
 
-[![Build Status](https://gitlab.rwu.de/prj-iki-ros2/robots/iki_diff_base/badges/main/pipeline.svg)](https://gitlab.rwu.de/prj-iki-ros2/robots/iki_diff_base/-/pipelines)
+[![Multi-Architecture Docker Build](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg)](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml)
+[![AMD64 Build Status](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg?job=build-push-amd64)](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml)
+[![ARM64 Build Status](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg?job=build-push-arm64)](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml)
+[![Multi-Arch Manifest](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg?job=create-manifests)](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml)
 
 Current setup is just the stripped demo-example from ros2 control for the diff-controler.
 
