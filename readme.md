@@ -1,9 +1,9 @@
 # Diff base
 
-[![Multi-Architecture Docker Build](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg)](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml)
-[![AMD64 Build Status](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg?job=build-push-amd64)](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml)
-[![ARM64 Build Status](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg?job=build-push-arm64)](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml)
-[![Multi-Arch Manifest](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg?job=create-manifests)](https://github.com/joseluiz/r2m_diff_bot/actions/workflows/docker-push.yml)
+[![Multi-Architecture Docker Build](https://github.com/rwu-r2m/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg)](https://github.com/rwu-r2m/r2m_diff_bot/actions/workflows/docker-push.yml)
+[![AMD64 Build Status](https://github.com/rwu-r2m/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg?job=build-push-amd64)](https://github.com/rwu-r2m/r2m_diff_bot/actions/workflows/docker-push.yml)
+[![ARM64 Build Status](https://github.com/rwu-r2m/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg?job=build-push-arm64)](https://github.com/rwu-r2m/r2m_diff_bot/actions/workflows/docker-push.yml)
+[![Multi-Arch Manifest](https://github.com/rwu-r2m/r2m_diff_bot/actions/workflows/docker-push.yml/badge.svg?job=create-manifests)](https://github.com/rwu-r2m/r2m_diff_bot/actions/workflows/docker-push.yml)
 
 Current setup is just the stripped demo-example from ros2 control for the diff-controler.
 
