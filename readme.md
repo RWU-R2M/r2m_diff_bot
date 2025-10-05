@@ -14,7 +14,7 @@ Current setup is just the stripped demo-example from ros2 control for the diff-c
 ## Setup Instructions
 
 ```bash
-git clone git@gitlab.rwu.de:prj-iki-ros2/robots/iki_diff_base.git && cd iki_diff_base
+git clone git@github.com:RWU-R2M/r2m_diff_bot.git && cd r2m_diff_bot
 ```
 
 ```bash
