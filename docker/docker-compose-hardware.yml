@@ -13,6 +13,7 @@ services:
     privileged: true
     stdin_open: true
     tty: true
+    ipc: host
     volumes:
       - /tmp/.X11-unix:/tmp/.X11-unix
       - $HOME/.Xauthority:/root/.Xauthority
